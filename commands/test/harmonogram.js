@@ -8,7 +8,7 @@ module.exports = {
 	async execute(interaction) {
 		await axios.get(process.env.FAV_API).then((res) => {
 			let data = res.data.harmonogramItem;
-			//doslova lennost
+			//doslova lenost
 			const embed = new EmbedBuilder().setColor(0xeb4034).setTitle(`Harmonogram Roku`);
 			const embed2 = new EmbedBuilder().setColor(0xeb4034);
 			for (let i = 0; i < data.length - 1; i++) {
